@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from './providers/AuthProvider';
 import { AiFillGoogleCircle, AiFillGithub } from "react-icons/ai";
 import { ToastContainer, toast } from 'react-toastify';
-
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const { signInUser, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
@@ -70,7 +70,7 @@ const Login = () => {
                             </label>
                             <input type="password" placeholder="Your password" name='password' className="input input-bordered" required />
                             <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                <Link to="#" className="label-text-alt link link-hover">Forgot password?</Link>
                             </label>
                         </div>
                         <div className="form-control mt-6">
@@ -82,7 +82,7 @@ const Login = () => {
                         <button onClick={handleGoogleSignIn}><AiFillGoogleCircle className='size-[25px]' /></button>
                         <button onClick={handleGithubSignIn}><AiFillGithub className='size-[25px]' /></button>
                     </div>
-                    <p className='text-center'>New here? Please<Link to="/register"><button className='btn btn-link'>Register</button></Link></p>
+                    <p className='text-center'>New here? Please <Link to="/register" className='btn btn-link'>Register</Link></p>
                 </div>
             </div>
         </div>

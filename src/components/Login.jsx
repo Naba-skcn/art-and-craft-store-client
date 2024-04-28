@@ -5,6 +5,7 @@ import { AiFillGoogleCircle, AiFillGithub } from "react-icons/ai";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const Login = () => {
     const { signInUser, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -49,13 +50,14 @@ const Login = () => {
     }
 
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero container mx-auto rounded-lg min-h-screen bg-center bg-cover bg-[url('https://t3.ftcdn.net/jpg/01/91/27/76/360_F_191277640_tdXKlzGlKAI8701Wd0WHQm6ljHAgDGPw.jpg')]">
             
             <ToastContainer />
             <div className="hero-content flex-col ">
                 <div className="text-center">
-                    <h1 className="text-5xl font-bold">Login now!</h1>
+                    <h1 className="text-5xl font-bold text-shadow-lg text-white">Login now!</h1>
                 </div>
+                <p className='text-white font-semibold text-center'>Welcome back to RusticChic Crafts!🌿<br />Log in to explore artisanal wonders and unlock exclusive offers.</p>
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form onSubmit={handleLogin} className="card-body">
                         <div className="form-control">
@@ -74,7 +76,7 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn bg-[#BA4A00] border-[#BA4A00] text-white">Login</button>
                         </div>
                     </form>
                     <p className='text-center font-semibold text-1xl'>Or, Sign in Using..</p>

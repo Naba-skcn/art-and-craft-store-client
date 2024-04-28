@@ -51,8 +51,8 @@ const Navbar = () => {
         </>
     ) : (
         <>
-            <Link to="/login"><button className="btn btn-sm">Login</button></Link>
-            <Link to="/register"><button className="btn btn-sm">Register</button></Link>
+            <Link to="/login"><button className="btn btn-sm bg-[#BA4A00] border-white text-white">Login</button></Link>
+            <Link to="/register"><button className="btn btn-sm bg-[#BA4A00] border-white text-white hidden lg:block">Register</button></Link>
         </>
     )}
 </div>

@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 const MyList = () => {
     const { user } = UseAuth();
 
-    const [items, setItems] = useState([]); // State for all items
+    const [items, setItems] = useState([]);
     const [filteredItems, setFilteredItems] = useState([]); // State for filtered items
     const [customizationFilter, setCustomizationFilter] = useState('all'); // State for filter
 
@@ -70,13 +70,11 @@ const MyList = () => {
           });
     };
 
-    
-
     return (
         <div className="container mx-auto">
             <h1 className="text-3xl font-semibold mb-4 text-center">My Craft List</h1>
             <div className="flex justify-end mb-4">
-                <label htmlFor="customizationFilter" className="mr-2">Filter by Customization:</label>
+                <label htmlFor="customizationFilter" className="mr-2 font-semibold text-2xl">Filter by Customization:</label>
                 <select id="customizationFilter" value={customizationFilter} onChange={handleFilterChange} className="px-2 py-1 border border-gray-300 rounded">
                     <option value="all">All</option>
                     <option value="yes">Yes</option>

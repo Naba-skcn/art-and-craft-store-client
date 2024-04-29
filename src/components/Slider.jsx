@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { EffectFade } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 
 const Slider = () => {
@@ -43,7 +44,9 @@ const Slider = () => {
                     <div className="absolute top-0 left-0 p-10 mt-[0px] lg:mt-[100px]  text-center text-white">
                     <h1 className="text-4xl font-bold">Discover artisanal wonders at RusticChic Crafts.</h1>
                         <p className=" text-sm lg:text-lg">Explore our curated collection of unique jute and wooden crafts, blending rustic charm with chic elegance. Find the perfect piece to add character to your space or give as a thoughtful gift. Embrace craftsmanship with us today.</p>
-                        <button className='btn mt-4 bg-[#BA4A00] border-[#BA4A00] text-white'>Know more About us</button>
+                        <Link to="/about">
+    <button className='btn mt-4 bg-[#BA4A00] border-[#BA4A00] text-white'>Know more About us</button>
+</Link>
                     </div>
                 </div>
             </SwiperSlide>

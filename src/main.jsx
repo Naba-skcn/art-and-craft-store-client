@@ -18,6 +18,8 @@ import ViewDetails from './components/ViewDetails.jsx';
 import MyList from './components/MyList.jsx';
 import Error from './components/Error.jsx';
 import Update from './components/Update.jsx';
+import CraftItemSection from './components/CraftItemSection.jsx';
+import AboutUs from './components/AboutUs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/about",
+        element: <AboutUs></AboutUs>
       },
       {
        path: "/add",

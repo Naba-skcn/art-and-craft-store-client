@@ -44,7 +44,7 @@ const AllItems = () => {
                                     <div className="text-sm text-gray-900">${item.price}</div>
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    <Link to={`/details/${item._id}`} className="text-blue-500 hover:underline">View Details</Link>
+                                <Link to={`/details/${item._id}`} className=" btn bg-[#BA4A00] border-white text-white">View Details</Link>
                                 </td>
                             </tr>
                         ))}

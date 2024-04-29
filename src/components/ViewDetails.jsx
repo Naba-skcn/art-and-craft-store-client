@@ -42,7 +42,7 @@ const ViewDetails = () => {
                         </div>
                         <div className="flex justify-between items-center">
                             <p className="text-sm"><span className="font-semibold">User Name:</span> {product.username}</p>
-                            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+                            <button className=" btn bg-[#BA4A00] border-white text-white">
                                 Add to Cart
                             </button>
                         </div>

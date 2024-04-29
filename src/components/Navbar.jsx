@@ -16,7 +16,7 @@ const Navbar = () => {
         <>
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/all">All Craft Items</NavLink></li>
-            <li><NavLink to="/add">Add Craft Item</NavLink></li>
+            <li><NavLink to="/add">Add Craft Items</NavLink></li>
             {user && <li><NavLink to="/update">My Craft List</NavLink></li>}
         </>
     );
@@ -34,7 +34,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost text-2xl font-bold">Rustic<span className='text-[#BA4A00]'>Chic</span>Crafts</Link>
+                <Link to="/" className="btn btn-ghost text-1xl lg:text-2xl font-bold">Rustic<span className='text-[#BA4A00]'>Chic</span>Crafts</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -47,7 +47,7 @@ const Navbar = () => {
             <div className="tooltip tooltip-left" data-tip={user.displayName}>
                 <span><img className='rounded-full size-[30px]' src={user.photoURL} alt="" /></span>
             </div>
-            <button onClick={handleLogOut} className="btn btn-sm ml-1">Logout</button>
+            <button onClick={handleLogOut} className="btn btn-sm  bg-[#BA4A00] border-[#BA4A00] text-white ml-1">Logout</button>
         </>
     ) : (
         <>

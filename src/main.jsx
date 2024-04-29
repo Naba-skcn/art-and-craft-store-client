@@ -13,6 +13,7 @@ import Login from './components/Login.jsx';
 import Register from './components/Register.jsx';
 import AddItem from './components/AddItem.jsx';
 import PrivateRoute from './components/routes/PrivateRoute.jsx';
+import AllItems from './components/AllItems.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
        path: "/add",
        element: <PrivateRoute><AddItem></AddItem></PrivateRoute>,
       },
+      {
+        path: "/all",
+        element: <AllItems></AllItems>,
+        loader: () => fetch('http://localhost:5000/item'),
+      }
     ]
   },
 ]);

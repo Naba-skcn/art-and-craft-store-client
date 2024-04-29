@@ -5,7 +5,7 @@ const AllItems = () => {
     const items = useLoaderData();
     return (
         <div className="container mx-auto">
-            <h1 className="text-3xl font-semibold mb-4 text-center">All Art & Craft Items</h1>
+            <h1 className="text-3xl font-semibold mb-4 text-center">All Products</h1>
             <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">

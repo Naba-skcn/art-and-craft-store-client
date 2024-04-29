@@ -61,6 +61,7 @@ const AddItem = () => {
 
     return (
         <div className='container mx-auto'>
+              <h1 className="text-3xl font-semibold mb-4 text-center">Add Products</h1>
             <section className="p-6 bg-center bg-cover bg-[url('https://as1.ftcdn.net/v2/jpg/05/68/33/96/1000_F_568339635_3IBKf4NozBKgIPSuTeHi1WB5Bog4hbXm.jpg')] dark:text-gray-900">
                 <form onSubmit={handleAddItem} noValidate="" action="" className="container flex flex-col mx-auto bg-opacity-30 backdrop-blur-lg p-8 space-y-12">
                     <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
@@ -119,8 +120,6 @@ const AddItem = () => {
                                     <option value="Made to order">Made to order</option>
                                 </select>
                             </div>
-                            {!user && (
-                                <>
                                     <div className="col-span-full sm:col-span-3">
                                         <label htmlFor="user_email" className="text-sm">User Email</label>
                                         <input id="user_email" type="email" name='email' placeholder="User Email" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
@@ -129,8 +128,6 @@ const AddItem = () => {
                                         <label htmlFor="user_name" className="text-sm">User Name</label>
                                         <input id="user_name" type="text" name='username' placeholder="User Name" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
                                     </div>
-                                </>
-                            )}
                             <button type="submit" className="btn btn-block text-white rounded-md bg-[#BA4A00] border-[#BA4A00]">Add</button>
                         </div>
                     </fieldset>

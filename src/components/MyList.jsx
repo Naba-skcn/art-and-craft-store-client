@@ -71,8 +71,12 @@ const MyList = () => {
                             <div className="flex justify-between mt-2">
                                 <Link to={`/details/${item._id}`} className="text-blue-500 hover:underline">View Details</Link>
                                 <div>
-                                    <button onClick={() => handleUpdate(item._id)} className="text-green-500 mr-2">Update</button>
-                                    <button onClick={() => handleDelete(item._id)} className="text-red-500">Delete</button>
+                                    <Link to={`/details/${item._id}`}>
+                                    <button onClick={() => handleUpdate(item._id)} className="btn bg-[#BA4A00] border-white text-white mr-2">Update</button>
+                                    </Link>
+                                    <Link>
+                                    <button onClick={() => handleDelete(item._id)} className="btn bg-[#BA4A00] border-white text-white">Delete</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

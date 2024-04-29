@@ -16,11 +16,14 @@ import PrivateRoute from './components/routes/PrivateRoute.jsx';
 import AllItems from './components/AllItems.jsx';
 import ViewDetails from './components/ViewDetails.jsx';
 import MyList from './components/MyList.jsx';
+import Error from './components/Error.jsx';
+import Update from './components/Update.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: '/',
@@ -46,6 +49,11 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/item/${params.id}`),
+      },
+      {
+        path: "/updateDetails/:id",
+        element: <PrivateRoute><Update></Update></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/item/${params.id}`),
       },
       {

@@ -42,7 +42,7 @@ const AddItem = () => {
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Item added successfully',
+                        text: 'Product added successfully',
                         icon: 'success',
                         confirmButtonText: 'Great'
                     })
@@ -52,7 +52,7 @@ const AddItem = () => {
                 console.error('Error adding item:', error);
                 Swal.fire({
                     title: 'Error!',
-                    text: 'Failed to add item',
+                    text: 'Failed to add product',
                     icon: 'error',
                     confirmButtonText: 'OK'
                 })

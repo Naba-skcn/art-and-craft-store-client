@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import UseAuth from './routes/UseAuth';
+import Swal from 'sweetalert2';
 
 const MyList = () => {
     const { user } = UseAuth();
@@ -37,15 +38,39 @@ const MyList = () => {
         setCustomizationFilter(event.target.value);
     };
 
-    const handleDelete = itemId => {
-        // Implement delete functionality
-        console.log(`Delete item with id ${itemId}`);
+    const handleDelete = _id => {
+        
+        console.log(_id);
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+             fetch(`http://localhost:5000/item/${_id}`,{
+                method: 'DELETE'
+             })
+             .then(res => res.json())
+             .then(data =>{
+                console.log(data);
+                if(data.deletedCount > 0){
+                   Swal.fire({
+                   title: "Deleted!",
+                   text: "Your product has been deleted.",
+                   icon: "success"
+              });
+
+                }
+             })
+            }
+          });
     };
 
-    const handleUpdate = itemId => {
-        // Implement update functionality
-        console.log(`Update item with id ${itemId}`);
-    };
+    
 
     return (
         <div className="container mx-auto">
@@ -72,7 +97,7 @@ const MyList = () => {
                                 <Link to={`/details/${item._id}`} className="text-blue-500 hover:underline">View Details</Link>
                                 <div>
                                     <Link to={`/updateDetails/${item._id}`}>
-                                    <button onClick={() => handleUpdate(item._id)} className="btn bg-[#BA4A00] border-white text-white mr-2">Update</button>
+                                    <button className="btn bg-[#BA4A00] border-white text-white mr-2">Update</button>
                                     </Link>
                                     <Link>
                                     <button onClick={() => handleDelete(item._id)} className="btn bg-[#BA4A00] border-white text-white">Delete</button>

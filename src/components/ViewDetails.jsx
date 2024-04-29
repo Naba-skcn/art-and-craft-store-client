@@ -4,12 +4,14 @@ import { useParams } from 'react-router-dom';
 const ViewDetails = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch(`http://localhost:5000/singleProduct/${id}`)
             .then(res => res.json())
             .then(data => {
                 setProduct(data);
+                setLoading(false);
             });
     }, [id]);
 

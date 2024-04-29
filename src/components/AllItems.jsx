@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 
 const AllItems = () => {
     const items = useLoaderData();
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        const delay = setTimeout(() => {
+            setLoading(false);
+        }, 200); 
+        return () => clearTimeout(delay);
+    }, [items]);
     return (
         <div className="container mx-auto">
             <h1 className="text-3xl font-semibold mb-4 text-center">All Products</h1>

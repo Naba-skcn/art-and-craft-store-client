@@ -14,6 +14,8 @@ import Register from './components/Register.jsx';
 import AddItem from './components/AddItem.jsx';
 import PrivateRoute from './components/routes/PrivateRoute.jsx';
 import AllItems from './components/AllItems.jsx';
+import ViewDetails from './components/ViewDetails.jsx';
+import MyList from './components/MyList.jsx';
 
 const router = createBrowserRouter([
   {
@@ -40,7 +42,17 @@ const router = createBrowserRouter([
         path: "/all",
         element: <AllItems></AllItems>,
         loader: () => fetch('http://localhost:5000/item'),
-      }
+      },
+      {
+        path: "/details/:id",
+        element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/item'),
+      },
+      {
+        path: "/update",
+        element: <PrivateRoute><MyList></MyList></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/item'),
+      },
     ]
   },
 ]);

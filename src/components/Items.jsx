@@ -35,7 +35,7 @@ const Items = ({ item }) => {
                             <div className="text-sm text-gray-900">${price}</div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                            <Link to={`/item/${item._id}`} className="text-blue-500 hover:underline">View Details</Link>
+                            <Link to={`/details/${item._id}`} className="text-blue-500 hover:underline">View Details</Link>
                         </td>
                     </tr>
                 </tbody>

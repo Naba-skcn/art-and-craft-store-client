@@ -1,17 +1,38 @@
 import React from 'react';
+import { Typewriter } from 'react-simple-typewriter'
 
 const AboutUs = () => {
+    const handleDone = () => {
+        console.log('Typewriter effect finished');
+    };
+
+    const handleType = () => {
+        console.log('Typing...');
+    };
+
     return (
         <div className='container mx-auto'>
             <h1 className="text-3xl font-semibold mb-4 text-center mt-6">About Rustic Chic Craft</h1>
             <article className="max-w-2xl px-6 py-24 mx-auto space-y-12 dark:bg-gray-100 dark:text-gray-900">
                 <div className="w-full mx-auto space-y-4 text-center">
                     <p className="text-xs font-semibold tracking-wider mt-[-80px] uppercase">#RusticChicCraft</p>
-                    <h1 className="text-4xl font-bold leading-tight md:text-5xl">Crafting Timeless Beauty, One Piece at a Time</h1>
+                    <h1 className="text-4xl font-bold leading-tight md:text-5xl">
+                        <Typewriter
+                            words={['Crafting Timeless Beauty, One Piece at a Time']}
+                            loop={5}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                            onLoopDone={handleDone}
+                            onType={handleType}
+                        />
+                    </h1>
                     <p className="text-sm dark:text-gray-600">by
-                        <span className="font-semibold">The Rustic Chic Craft Team</span>
+                        <span className="font-semibold"> The Rustic Chic Craft Team</span>
                         on
-                        <time dateTime="2024-04-30">April 30th, 2019</time>
+                        <time dateTime="2019-04-30"> April 30th, 2019</time>
                     </p>
                 </div>
                 <div className="dark:text-gray-800">

@@ -4,8 +4,6 @@ import 'swiper/swiper-bundle.css';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { EffectFade } from 'swiper/modules';
 import { Link } from 'react-router-dom';
-
-
 const Slider = () => {
     return (
         <Swiper className='container mx-auto'

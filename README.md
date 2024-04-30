@@ -2,7 +2,7 @@ Rustic Chic Craft
 
 Welcome to Rustic Chic Craft! Explore the beauty of handmade rustic crafts with a touch of chic elegance.
 
-Live Site URL:
+Live Site URL: https://art-and-craft-a10.web.app/
 
 About Rustic Chic Craft:
 1. Handcrafted Elegance: Discover a curated collection of handcrafted rustic crafts that blend charm and sophistication.

@@ -7,7 +7,7 @@ const CraftItemSection = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:5000/item');
+                const response = await fetch(' https://art-and-craft-store-server-a10.vercel.app/item');
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }

@@ -29,7 +29,7 @@ const AddItem = () => {
         const newItem = { image, name, sub, description, price, rating, custom, time, status, email, username };
 
         // Send data to the server
-        fetch('http://localhost:5000/add', {
+        fetch(' https://art-and-craft-store-server-a10.vercel.app/add', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

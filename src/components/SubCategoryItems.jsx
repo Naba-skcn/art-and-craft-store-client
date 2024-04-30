@@ -8,8 +8,8 @@ const SubCategoryItems = () => {
     useEffect(() => {
         const fetchItems = async () => {
             try {
-                console.log(`http://localhost:5000/subcategory/${sub}`)
-                const response = await fetch(`http://localhost:5000/subcategory/${sub}`);
+                console.log(` https://art-and-craft-store-server-a10.vercel.app/subcategory/${sub}`)
+                const response = await fetch(` https://art-and-craft-store-server-a10.vercel.app/subcategory/${sub}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch items');
                 }

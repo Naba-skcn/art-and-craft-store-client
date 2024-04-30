@@ -7,7 +7,7 @@ const ViewDetails = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleProduct/${id}`)
+        fetch(` https://art-and-craft-store-server-a10.vercel.app/singleProduct/${id}`)
             .then(res => res.json())
             .then(data => {
                 setProduct(data);

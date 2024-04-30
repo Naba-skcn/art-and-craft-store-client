@@ -7,7 +7,7 @@ const SubCategories = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:5000/categories');
+                const response = await fetch(' https://art-and-craft-store-server-a10.vercel.app/categories');
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }

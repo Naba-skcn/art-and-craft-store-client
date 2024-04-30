@@ -27,7 +27,7 @@ const Update = () => {
         const updateItem = { image, name, sub, description, price, rating, custom, time, status, email, username };
     
         // Send data to the server
-        fetch(`http://localhost:5000/item/${product._id}`, {
+        fetch(` https://art-and-craft-store-server-a10.vercel.app/item/${product._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

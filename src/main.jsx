@@ -50,27 +50,27 @@ const router = createBrowserRouter([
       {
        path: "/subcategory/:sub",
        element: <SubCategoryItems></SubCategoryItems>,
-       loader: () => fetch('http://localhost:5000/item'),
+       loader: () => fetch(' https://art-and-craft-store-server-a10.vercel.app/item'),
       },
       {
         path: "/all",
         element: <AllItems></AllItems>,
-        loader: () => fetch('http://localhost:5000/item'),
+        loader: () => fetch(' https://art-and-craft-store-server-a10.vercel.app/item'),
       },
       {
         path: "/details/:id",
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/item/${params.id}`),
+        loader: ({params}) => fetch(` https://art-and-craft-store-server-a10.vercel.app/item/${params.id}`),
       },
       {
         path: "/updateDetails/:id",
         element: <PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/item/${params.id}`),
+        loader: ({params}) => fetch(` https://art-and-craft-store-server-a10.vercel.app/item/${params.id}`),
       },
       {
         path: "/update",
         element: <PrivateRoute><MyList></MyList></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/item'),
+        loader: () => fetch(' https://art-and-craft-store-server-a10.vercel.app/item'),
       },
     ]
   },

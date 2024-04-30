@@ -41,7 +41,7 @@ const AboutUs = () => {
                 </div>
                 <div className="pt-12 border-t dark:border-gray-300">
                     <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
-                        <img src="https://source.unsplash.com/75x75/?portrait" alt="Team Member" className="self-center flex-shrink-0 w-24 h-24 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-300" />
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQVlKHcGU8e_4KuD768cjCBjTbGV-GWTyv_g&s" alt="Team Member" className="self-center flex-shrink-0 w-24 h-24 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-300" />
                         <div className="flex flex-col">
                             <h4 className="text-lg font-semibold">Meet Our Team</h4>
                             <p className="dark:text-gray-600">Our team at Rustic Chic Craft is comprised of passionate artisans dedicated to bringing your vision to life. With a keen eye for design and a commitment to quality, we strive to exceed your expectations every step of the way.</p>

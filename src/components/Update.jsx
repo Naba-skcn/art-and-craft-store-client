@@ -120,6 +120,14 @@ const Update = () => {
                                     <option value="Made to order">Made to order</option>
                                 </select>
                             </div>
+                            <div className="col-span-full sm:col-span-3">
+                                        <label htmlFor="user_email" className="text-sm">User Email</label>
+                                        <input id="user_email" type="email" name='email'disabled defaultValue={email} placeholder="User Email" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
+                                    </div>
+                                    <div className="col-span-full sm:col-span-3">
+                                        <label htmlFor="user_name" className="text-sm">User Name</label>
+                                        <input id="user_name" type="text" name='username' disabled defaultValue={username} placeholder="User Name" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
+                                    </div>
                             <button type="submit" className="btn btn-block text-white rounded-md bg-[#BA4A00] border-[#BA4A00]">Update</button>
                         </div>
                     </fieldset>

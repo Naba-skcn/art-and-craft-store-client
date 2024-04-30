@@ -18,7 +18,6 @@ import ViewDetails from './components/ViewDetails.jsx';
 import MyList from './components/MyList.jsx';
 import Error from './components/Error.jsx';
 import Update from './components/Update.jsx';
-import CraftItemSection from './components/CraftItemSection.jsx';
 import AboutUs from './components/AboutUs.jsx';
 import SubCategoryItems from './components/SubCategoryItems.jsx';
 
@@ -49,8 +48,9 @@ const router = createBrowserRouter([
        element: <PrivateRoute><AddItem></AddItem></PrivateRoute>,
       },
       {
-       path: "/sub",
-       element: <SubCategoryItems></SubCategoryItems>
+       path: "/subcategory/:sub",
+       element: <SubCategoryItems></SubCategoryItems>,
+       loader: () => fetch('http://localhost:5000/item'),
       },
       {
         path: "/all",

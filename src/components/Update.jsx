@@ -87,7 +87,7 @@ const Update = () => {
                                     <option value="Wooden Utensils and Kitchenware">Wooden Utensils and Kitchenware</option>
                                     <option value="Jute Home Decor">Jute Home Decor</option>
                                     <option value="Jute Kitchenware & utensils">Jute Kitchenware & utensils</option>
-                                    <option value="Jute and wooden jewellery">Jute and wooden jewellery</option>
+                                    <option value="Jute and wooden jewellery">Jute and Wooden Jewellery</option>
                                 </select>
                             </div>
                             <div className="col-span-full">

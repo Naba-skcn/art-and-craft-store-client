@@ -6,14 +6,12 @@ const Update = () => {
     const product = useLoaderData();
     const { image, name, sub, description, price, rating, custom, time, status, email, username }= product;
 
-    // Function to handle form submission
     const handleUpdate = event => {
         event.preventDefault();
         
-        // Ensure the form event is being passed correctly
         const form = event.target;
     
-        // Get form values
+        // form values
         const image = form.image.value;
         const name = form.name.value;
         const sub = form.sub.value;
@@ -27,7 +25,7 @@ const Update = () => {
         const updateItem = { image, name, sub, description, price, rating, custom, time, status, email, username };
     
         // Send data to the server
-        fetch(` https://art-and-craft-store-server-a10.vercel.app/item/${product._id}`, {
+        fetch(`https://art-and-craft-store-server-a10.vercel.app/item/${product._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
